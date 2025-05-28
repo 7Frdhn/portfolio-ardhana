@@ -809,12 +809,19 @@ section.active {
         border-top: .1rem solid rgba(0, 0, 0, .2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
         text-align: center;
-        display: none;
+           /* ANIMASI: tambahkan */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
     }
 
-    nav.active {
-        display: block;
-    }
+nav.active {
+    max-height: 500px; /* atau tinggi maksimal menu */
+    opacity: 1;
+    transform: translateY(0);
+}
 
     nav a {
         display: block;
